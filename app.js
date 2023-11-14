@@ -106,19 +106,42 @@ const alumnoWithEmail = {
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 console.log(numeros.length);
+//FILTER
+const pares = numeros.filter(e => !(e % 2))
+const impares = numeros.filter(e => e % 2)
 
-const pares = [];
-const impares = [];
+console.log(pares);
+console.log(impares);
 
-for (let i = 0; i < numeros.length; i++) {
-  if (numeros[i] % 2) {
-    //console.log("Soy impar", numeros[i]);
-    impares.push(numeros[i]);
-  } else {
-    // console.log("Soy par", numeros[i]);
-    pares.push(numeros[i]);
-  }
-}
 
-console.log({ pares });
-console.log({ impares });
+//MAP
+const doble = numeros.map((num) => num * 2)
+
+console.log(doble);
+
+//FOR EACH
+
+numeros.forEach((num) => {
+  // console.log(num);
+})
+
+const miNumero = 10
+
+const existe = numeros.find((num) => num === miNumero) 
+console.log(existe);
+
+// const pares = [];
+// const impares = [];
+
+// for (let i = 0; i < numeros.length; i++) {
+//   if (numeros[i] % 2) {
+//     //console.log("Soy impar", numeros[i]);
+//     impares.push(numeros[i]);
+//   } else {
+//     // console.log("Soy par", numeros[i]);
+//     pares.push(numeros[i]);
+//   }
+// }
+
+//console.log({ pares });
+//console.log({ impares });
