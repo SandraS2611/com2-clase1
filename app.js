@@ -19,8 +19,8 @@ const app = express()
 app.listen(3000)
 console.log("server on port 3000");
 
-//GET -- obtener recursos
-//POST -- crear recursos
-//PATCH -- editar recursos ya creados de forma parcial
-//DELETE -- eliminar recursos
-//PUT -- editar un recursos si existe y si no lo crea. 
+//GET --> obtener recursos
+//POST --> crear recursos
+//PATCH --> editar recursos ya creados de forma parcial
+//DELETE --> eliminar recursos
+//PUT --> editar un recursos si existe y si no lo crea. 
