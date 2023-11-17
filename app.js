@@ -1,8 +1,26 @@
-const http = require("node:http")
+// const express = require("express")
 
-const servidor = http.createServer((req, res) => {
-res.end("Hola desde mi servidor http")
-})
+// const app = express()
 
-servidor.listen(3000)
-console.log("Server listening on Port 3000");
+// app.get('/',(req, res) =>{
+//     res.send("hello world")
+// })
+
+// //IP local = 127.0.0.1 === localhost :3000 === Puerto
+
+
+// app.listen(3000)
+// console.log("Server listening on Port 3000");
+
+import express from "express"
+
+const app = express()
+
+app.listen(3000)
+console.log("server on port 3000");
+
+//GET -- obtener recursos
+//POST -- crear recursos
+//PATCH -- editar recursos ya creados de forma parcial
+//DELETE -- eliminar recursos
+//PUT -- editar un recursos si existe y si no lo crea. 
