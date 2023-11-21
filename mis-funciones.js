@@ -3,7 +3,15 @@ export const ctrlGetAllPosts = (req, res) => {
 }
 
 export const ctrlCreatePosts = (req, res) => {
-    res.status(200).json
+  
+  posts.push({
+      title:"",
+      desc: "",
+      image: "",
+    })
+
+    res.sendStatus(201)
+
 }
 
 //export default controlador
