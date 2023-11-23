@@ -15,8 +15,8 @@
     "helmet": "^7.1.0",
     "morgan": "^1.10.0"
   },
-  "description": "",
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "description": ""
 }
