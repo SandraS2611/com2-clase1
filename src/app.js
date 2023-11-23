@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //!VALIDAIÓN PERSONALIZADA
 
-app.use(validarPost)
+// app.use(validarPost)
 
 //127.0.0.1:3000 ===localhost:3000
 // http:/localhost:3000/
