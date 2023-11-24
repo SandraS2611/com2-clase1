@@ -3,11 +3,13 @@ import {
   ctrlCreatePosts,
   ctrlGetAllPosts,
   ctrlGetPostById,
+  ctrlUpdatePost,
 } from "../controllers/post-controllers.js";
 import { handlerException } from "../middleware/handler-error.js";
 import { createPostsValidation } from "../../validations/create-post-validations.js";
 import { applyValidations } from "../middleware/apply-validations.js";
 import { findPostsValidation } from "../../validations/find-post-validations.js";
+
 
 const postRouter = Router();
 
@@ -21,5 +23,12 @@ postRouter.get(
 );
 
 postRouter.post("/", createPostsValidation, applyValidations, ctrlCreatePosts);
+
+postRouter.patch(
+  "/:postId",
+  
+  applyValidations,
+  ctrlUpdatePost
+);
 
 export { postRouter };

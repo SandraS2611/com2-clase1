@@ -17,11 +17,29 @@ const { title, desc, image } = req.body
 };
 
 
-export const ctrlGetPostById = (req, res) => {
+export const ctrlGetPostById = (req, res) => { //TODO PARA BUSCAR POR ID
+
 const { postId } = req.params
+
 const post = postModel.findOne({ id: postId })
+
 if (!post) {
+
   return res.sendStatus(404)
 }
-res.json(post)
+res.status(200).json(post)
+}
+
+
+export const ctrlUpdatePost = (req, res) => { //todo PARA BUSCAR POR ID Y ACTUALIZAR
+  const { postId } = req.params
+
+const { title, desc, image } = req.body
+
+const updatedPost = postModel.update(postId, { title, desc, image })
+
+
+if (!updatedPost) return res.sendStatus(404)
+
+res.sendStatus(200)
 }
