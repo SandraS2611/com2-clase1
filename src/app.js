@@ -4,7 +4,7 @@ import morgan from "morgan"
 import cors from "cors"
 import helmet from "helmet"
 import { postRouter } from "./routes/posts.routes.js";
-import { validarPost } from "./middleware/validar-create-post.js";
+
 
 const app = express();
 
