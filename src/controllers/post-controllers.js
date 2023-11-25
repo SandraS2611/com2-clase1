@@ -43,3 +43,12 @@ if (!updatedPost) return res.sendStatus(404)
 
 res.sendStatus(200)
 }
+
+export const ctrlDeletePost = (req, res) => {
+
+const { postId } = req.params
+
+  postModel.destroy({ id: postId })
+
+  res.sendStatus(200)
+}

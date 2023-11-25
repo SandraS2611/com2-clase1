@@ -33,15 +33,18 @@ const getPostById = ({ id }) => {
 
 // !EDITAR
 const findPostByIdAndUpdate = (id, data) => {
-  const post = getPostById(id);
+  const post = getPostById({ id });
   if (!post) return null;
 
   posts = posts.map((post) => {
     if (post.id === id) {
-      return {
-        ...post,
-        ...data,
-      };
+
+      if (data.title) post.title = data.title
+      if (data.desc) post.desc = data.desc
+      if (data.image) post.image = data.image
+
+      return post
+
     }
     return post;
   });

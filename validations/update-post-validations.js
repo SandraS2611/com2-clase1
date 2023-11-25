@@ -1,6 +1,7 @@
-import { body } from "express-validator";
+import { body, param } from "express-validator";
 
 export const updatePostsValidation = [
+  param("postId").isNumeric().withMessage("La id debe ser un número.").toInt(),
   body("title")
     .optional()
     .isString()
