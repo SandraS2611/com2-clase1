@@ -5,6 +5,8 @@ import helmet from "helmet"
 
 import { postRouter } from "./routes/posts.routes.js";
 
+import { env } from "../settings/envs.js"; 
+
 
 const app = express();
 
@@ -37,5 +39,7 @@ app.get('/', (req,res) => {  //!RENDERIZA
 
 app.use('/posts', postRouter)
 
-app.listen(3000);
-console.log("server listening on port 3000");
+app.listen(env.PORT, () => {
+
+    console.log(`server on port ${env.PORT}`);
+});
